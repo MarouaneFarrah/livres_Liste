@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // configuration
-const port = process.env.PT;
+const port = process.env.PT|| 5001;
 const Username = process.env.UN;
 const Password = process.env.PW;
 
