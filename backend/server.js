@@ -10,12 +10,12 @@ app.use(cors());
 app.use(express.json());
 
 // configuration
-const port = process.env.PT;
+const port = process.env.PT|| 5001;
 const Username = process.env.UN;
 const Password = process.env.PW;
 
 // connect to MongoDB
-mongoose.connect(`mongodb+srv://${Username}:${Password}@bio.vkpf1.mongodb.net/`)
+mongoose.connect(`mongodb+srv://${Username}:${Password}@bio.vkpf1.mongodb.net/test?retryWrites=true&w=majority`)
 .then(() => {
     console.log("Connected to MongoDB");
     app.listen(port, () => console.log(`Server is running on port ${port}`));}).catch(err => console.log(err));
