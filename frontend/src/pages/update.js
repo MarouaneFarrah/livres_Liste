@@ -13,7 +13,7 @@ export default function Update() {
  const [genre, setGenre] = useState("");
  const navigate = useNavigate(); 
  useEffect(() => {
-  axios.get(`http://localhost:5001/livre/${id}`)
+  axios.get(`https://livres-liste-backend.onrender.com/livre/${id}`)
   .then((res) => {
    setTitre(res.data.titre);
    setAuteur(res.data.auteur);
@@ -33,7 +33,7 @@ export default function Update() {
    genre,
   };
   axios
-   .put(`http://localhost:5001/livre/${id}`, updatedBook)
+   .put(`https://livres-liste-backend.onrender.com/livre/${id}`, updatedBook)
    .then((res) => {
     console.log("Book updated successfully:", res.data);
     navigate("/");

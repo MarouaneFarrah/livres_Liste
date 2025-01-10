@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5001/livres')
+      .get('https://livres-liste-backend.onrender.com/livres')
       .then((res) => {
         setLivres(res.data.Data);
         setIsLoading(false);

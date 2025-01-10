@@ -10,7 +10,7 @@ export default function Details() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:5001/livre/${id}`)
+            .get(`https://livres-liste-backend.onrender.com/livre/${id}`)
             .then((res) => {
                 setBook(res.data);
             })

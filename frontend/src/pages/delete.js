@@ -15,7 +15,7 @@ export default function Delete() {
     if (confirmDelete) {
       setIsDeleting(true);
       axios
-        .delete(`http://localhost:5001/livre/${id}`)
+        .delete(`https://livres-liste-backend.onrender.com/livre/${id}`)
         .then((res) => {
           console.log("Livre supprimé avec succès:", res.data);
           navigate("/");

@@ -23,7 +23,7 @@ export default function Add() {
 
         console.log(newBook);
         axios
-            .post("http://localhost:5001/livre", newBook)
+            .post("https://livres-liste-backend.onrender.com/livre", newBook)
             .then((res) => {
                 console.log("Book added successfully:", res.data);
                 navigate("/");
